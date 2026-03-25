@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-50: #e6f7fa;
+  --color-ocean-100: #b3e8f0;
+  --color-ocean-200: #80d9e6;
+  --color-ocean-300: #4dcadc;
+  --color-ocean-400: #26bdd5;
+  --color-ocean-500: #0891b2;
+  --color-ocean-600: #06748f;
+  --color-ocean-700: #04576c;
+  --color-ocean-800: #023a48;
+  --color-ocean-900: #011d24;
+
+  --color-sand-50: #fefcf3;
+  --color-sand-100: #fdf6db;
+  --color-sand-200: #fbeebf;
+  --color-sand-300: #f8e4a0;
+  --color-sand-400: #f5d880;
+  --color-sand-500: #eab308;
+  --color-sand-600: #ca9a06;
+
+  --color-coral-50: #fff1f0;
+  --color-coral-100: #ffe0de;
+  --color-coral-200: #ffbfba;
+  --color-coral-300: #ff9a91;
+  --color-coral-400: #ff6f61;
+  --color-coral-500: #e85d50;
+  --color-coral-600: #c44a3f;
+
+  --color-palm-50: #edfcf2;
+  --color-palm-100: #d4f7df;
+  --color-palm-200: #a8edbe;
+  --color-palm-300: #6fdf96;
+  --color-palm-400: #38c96c;
+  --color-palm-500: #16a34a;
+  --color-palm-600: #0f7a38;
+
+  --color-sunset-50: #fff7ed;
+  --color-sunset-100: #ffedd5;
+  --color-sunset-200: #fed7aa;
+  --color-sunset-300: #fdba74;
+  --color-sunset-400: #fb923c;
+  --color-sunset-500: #f97316;
+  --color-sunset-600: #ea580c;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fefefe;
+  color: #1a1a2e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, #0891b2 0%, #06748f 50%, #023a48 100%);
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, #ff6f61 0%, #f97316 50%, #eab308 100%);
+}
+
+.gradient-tropical {
+  background: linear-gradient(135deg, #0891b2 0%, #16a34a 50%, #eab308 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient-ocean {
+  background: linear-gradient(135deg, #0891b2, #04576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sunset {
+  background: linear-gradient(135deg, #ff6f61, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0891b2;
+  border-radius: 3px;
+}
